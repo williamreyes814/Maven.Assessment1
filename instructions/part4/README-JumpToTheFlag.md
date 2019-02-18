@@ -49,7 +49,7 @@ Assert.assertEquals(expected, actual);
 ``` 
 
 * **Explanation**
-	* As Tariq can only jump 1 unit or `j` units and `j = 1`, Tariq can only ever make 1-unit jumps. This means that it will take him 3 steps to reach the flag, so we return 3.
+	* As Tariq can only jump 1 unit or `jumpHeight` units and `jumpHeight = 1`, Tariq can only ever make 1-unit jumps. This means that it will take him 3 steps to reach the flag, so we return 3.
 
 
 
@@ -64,7 +64,7 @@ Assert.assertEquals(expected, actual);
 ``` 
 
 * **Explanation**
-	* Tariq will jump `j = 2` units, and then jump 1 more unit to reach the flag. Thus, we return 2.
+	* Tariq will jump `jumpHeight = 2` units, and then jump 1 more unit to reach the flag. Thus, we return 2.
 
 
 
@@ -79,4 +79,4 @@ Assert.assertEquals(expected, actual);
 ``` 
 
 * **Explanation**
-	* Tariq will make a single jump `j = 3` units up the rock wall and reach the flag, so we return 1.
+	* Tariq will make a single jump `jumpHeight = 3` units up the rock wall and reach the flag, so we return 1.
