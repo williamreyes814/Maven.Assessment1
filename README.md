@@ -24,14 +24,14 @@
         * [Palindrome](./instructions/part5/README-Palindrome.md)
 
 ## **Frequently Asked Questions**
-* Can I modify the tests?
-  * **No**-- Absolutely not. You are forbidden from modifying the tests.
 * Can I use content from my old labs?
   * Yes.
 * Can I use content from the web / google?
   * Yes.
 * Can I **contact** someone other than an instructor for help?
   * No.
+* Can I modify the tests?
+  * **No**-- Absolutely not. You are forbidden from modifying the tests.
 * What if the tests are requesting something different than the instructions / comments?
   * Code against **the tests**, not the instructions.
 * What are the `Sample Script` and `Sample Output` portions of each `README`?
