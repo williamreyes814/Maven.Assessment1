@@ -32,6 +32,8 @@
   * Yes.
 * Can I **contact** someone other than an instructor for help?
   * No.
+* What if the tests are requesting something different than the instructions / comments?
+  * Code against **the tests**, not the instructions.
 * What are the `Sample Script` and `Sample Output` portions of each `README`?
   * Each `README` contains sample code which illustrates the _behavior_ of the respective method.
   * **Refer to the tests** to have a better understanding of the intended behavior.
