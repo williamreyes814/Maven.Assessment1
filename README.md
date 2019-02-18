@@ -24,6 +24,8 @@
         * [Palindrome](./instructions/part5/README-Palindrome.md)
 
 ## **Frequently Asked Questions**
+* Can I modify the tests?
+  * **No**-- Absolutely not. You are forbidden from modifying the tests.
 * Can I use content from my old labs?
   * Yes.
 * Can I use content from the web / google?
