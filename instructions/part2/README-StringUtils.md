@@ -21,24 +21,21 @@
 * Sample Script
 
     ```
-   // Given 
-   MultiplesDeleter deleter = new MultiplesDeleter();
-    Integer[] inputArray = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+    // Given 
+    String inputString = "Once upon a time there was a method";
 
     // When
-    Integer[] outcome = q1.deleteEvens(inputArray);
+    String[] outcome = StringUtils.getWords(inputString);
 
     // Then
     String outcomeStr = Arrays.toString(outcome);
     System.out.println(outcomeStr);
     ```
 
-
-
 * Sample Output
 
     ```
-    [1, 3, 5, 7, 9]
+    [Once, upon, a, time, there, was, a, method]
     ```
     
     
@@ -59,14 +56,13 @@
 
     ```
     // Given 
-    Integer[] inputArray = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+    String inputString = "Make sure to commit your code";
 
     // When
-    Integer[] outcome = deleter.deleteOdds(inputArray);
+    String outcome = StringUtils.getFirstWord(inputString);
 
     // Then
-    String outcomeStr = Arrays.toString(outcome);
-    System.out.println(outcomeStr);
+    System.out.println(outcome);
     ```
 
 
@@ -74,11 +70,8 @@
 * Sample Output
 
     ```
-    [2, 4, 6, 8, 10]
+    Make
     ```
-    
-    
-    
     
 
     
@@ -92,15 +85,14 @@
 * Sample Script
 
     ```
-   // Given 
-    Integer[] inputArray = { 3, 6, 9, 12, 15, 4, 7, 10, 13, 16};
-
+    // Given 
+    String inputString = "Super class sea turtle";
+    
     // When
-    Integer[] outcome = deleter.deleteMultiplesOf3(inputArray);
-
+    String outcome = StringUtils.reverseFirstWord(inputString);
+    
     // Then
-    String outcomeStr = Arrays.toString(outcome);
-    System.out.println(outcomeStr);
+    System.out.println(outcome);
     ```
 
 
@@ -108,7 +100,7 @@
 * Sample Output
 
     ```
-    [4, 7, 10, 13, 16]
+    repuS
     ```
     
     
@@ -125,23 +117,19 @@
 
     ```
    // Given
-    Integer multiple = 6;
-    Integer[] inputArray = { 6, 12, 18, 24, 30, 4, 7, 10, 13, 16};
+   String inputString = "Spoons are for scooping";
+   
+   // When
+   String actual = StringUtils.reverseFirstWordThenCamelCase(inputString);
 
-    // When
-    Integer[] outcome = deleter.deleteMultiplesOfN(inputArray, multiple);
-
-    // Then
-    String outcomeStr = Arrays.toString(outcome);
-    System.out.println(outcomeStr);
+   // Then
+   System.out.println(outcome);
     ```
-
-
 
 * Sample Output
 
     ```
-    [4, 7, 10, 13, 16]
+    Snoops
     ```
 
 
@@ -156,18 +144,16 @@
 
 ### Example
 * Sample Script
-
     ```
    // Given
-    Integer multiple = 6;
-    Integer[] inputArray = { 6, 12, 18, 24, 30, 4, 7, 10, 13, 16};
+   String inputString = "Goal";
+   Integer characterIndex = 2;
+   
+   // When
+   String outcome = StringUtils.removeCharacterAtIndex(inputString, characterIndex);
 
-    // When
-    Integer[] outcome = deleter.deleteMultiplesOfN(inputArray, multiple);
-
-    // Then
-    String outcomeStr = Arrays.toString(outcome);
-    System.out.println(outcomeStr);
+   // Then
+   System.out.println(outcome);
     ```
 
 
@@ -175,5 +161,6 @@
 * Sample Output
 
     ```
-    [4, 7, 10, 13, 16]
+    Gol
     ```
+
