@@ -98,7 +98,7 @@
     Integer[] input = { 1, 2, 3, 4, 5};
     
     // : When
-    Integer outcome = IntegerArrayUtils.getSum(input);
+    Integer outcome = IntegerArrayUtils.getAverage(input);
     
     // : Then
     System.out.println(outcome);

@@ -59,22 +59,22 @@
 
     ```
     // : Given
-    RockPaperScissors rps = new RockPaperScissors();
-    String input = "rock";
+    Integer valueToRemove = 4;
+    Integer[] inputArray = {5, 6, 4, 2, 9, 3, 0};
     
     // : When
-    String outcome = rps.getLosingMove(input);
+    Integer[] outcome = (Integer[]) ArrayUtils.removeValue(inputArray, valueToRemove);
     
     // : Then
-    System.out.println(outcome);
+    String outcomeStr = Arrays.toString(outcome);
+    System.out.println(outcomeStr);
     ```
-
 
 
 * Sample Output
 
     ```
-    scissors
+    [5, 6, 2, 9, 3, 0]
     ```
     
     
@@ -129,7 +129,7 @@
     Integer[] inputArray = {1,1,1,1,2,2,2,3,3,4};
 
     // When
-    Integer outcome = ArrayUtils.getMostCommon(inputArray);
+    Integer outcome = ArrayUtils.getLeastCommon(inputArray);
 
     // Then
     System.out.println(outcome);

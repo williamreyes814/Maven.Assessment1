@@ -15,13 +15,13 @@
 <br><br><br><br>
 ## `Integer getSumOfN(Integer n)`
 * **Description**
-    * Given an Integer, `n`, return the sum of all integers between 0 and not including `n`
+    * Given an Integer, `n`, return the sum of all integers from 0 up to and including `n`
 ### Example
 * Sample Script
 
     ```
     // : Given
-    Integer input = 5;
+    Integer input = 4;
     
     // : When
     Integer outcome = IntegerUtils.getSumOfN(input);
@@ -35,7 +35,7 @@
 * Sample Output
 
     ```
-    12
+    10
     ```
 
 
@@ -56,16 +56,16 @@
 <br><br><br><br>
 ## `Integer getProductOfN(Integer n)`
 * **Description**
-    * Given an Integer , `n`, return the product of all integers between 0 and not including `n`.
+    * Given an Integer , `n`, return the product of all integers from 0 up to and includingg `n`.
 ### Example
 * Sample Script
 
     ```
     // : Given
-    Integer input = 120;
+    Integer input = 7;
     
     // : When
-    Integer outcome = IntegerUtils.getProduct(input);
+    Integer outcome = IntegerUtils.getProductOfN(input);
     
     // : Then
     System.out.println(outcome);
@@ -76,7 +76,7 @@
 * Sample Output
 
     ```
-    120
+    5040
     ```
 
 
@@ -100,7 +100,7 @@
     Integer input = 12345
     
     // : When
-    Integer outcome = IntegerUtils.getSum(input);
+    Integer outcome = IntegerUtils.reverseDigits(input);
     
     // : Then
     System.out.println(outcome);
