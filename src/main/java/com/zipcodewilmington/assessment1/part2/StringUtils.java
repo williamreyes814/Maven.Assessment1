@@ -27,8 +27,8 @@ public class StringUtils {
      */
     public static String getFirstWord(String sentence) {
 
-
-        return getFirstWord(sentence);
+String[]arr = getWords(sentence);
+        return arr[0];
     }
 
     /**
@@ -39,7 +39,7 @@ public class StringUtils {
     public static String reverseFirstWord(String sentence) {
 
 
-        return reverse(getFirstWord(sentence));
+        return reverseFirstWordThenCamelCase(sentence);
     }
 
     /**
@@ -50,7 +50,7 @@ public class StringUtils {
     public static String reverseFirstWordThenCamelCase(String sentence) {
 
 
-        return camelCase(reverseFirstWord(sentence));
+        return reverseFirstWordThenCamelCase(sentence);
     }
 
 
