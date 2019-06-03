@@ -3,6 +3,7 @@ package com.zipcodewilmington.assessment1.part2;
 /**
  * Created by leon on 2/16/18.
  */
+import java.util.Arrays;
 public class ArrayUtils {
     /**
      * @param objectArray   an array of any type of Object
@@ -11,7 +12,17 @@ public class ArrayUtils {
      * Given an array of objects, named `objectArray`, and an object `objectToCount`, return the number of times the `objectToCount` appears in the `objectArray`
      */
     public static Integer getNumberOfOccurrences(Object[] objectArray, Object objectToCount) {
-        return null;
+        Integer counter = 0;
+
+        for(int i = 0; i <= objectArray.length -1; i++){
+
+            if(objectArray[i] == objectToCount){
+
+                counter++;
+            }
+        }
+
+        return counter;
     }
 
     /**
@@ -21,9 +32,22 @@ public class ArrayUtils {
      * Given an array of objects, name `objectArray`, and an object `objectToRemove`, return an array of objects with identical contents excluding `objectToRemove`
      */
     public static Object[] removeValue(Object[] objectArray, Object objectToRemove) {
-        return null;
-    }
 
+        Integer occurrences = getNumberOfOccurrences(objectArray,objectToRemove);
+
+        Object[] resultArr =new Object[objectArray.length - occurrences];
+        int n = 0;
+        for(Object o : objectArray){
+
+            if(o != objectToRemove){
+                resultArr[n++] = o;
+            }
+
+        }
+
+        return resultArr;
+
+    }
     /**
      * @param objectArray an array of any type of Object
      * @return the most frequently occurring object in the array
