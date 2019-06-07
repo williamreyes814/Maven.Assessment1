@@ -38,8 +38,13 @@ String[]arr = getWords(sentence);
      */
     public static String reverseFirstWord(String sentence) {
 
+String firstWord = getFirstWord(sentence);// getFirstword is calling from the method above meaning less work to do
+StringBuilder sBuilder = new StringBuilder(firstWord);
+//above you're making a new string builder with the first word ONLY
 
-        return reverseFirstWordThenCamelCase(sentence);
+    return sBuilder.reverse().toString();// <-- converting string builder back to regular string.
+    //     ^^ reversing string builder(the first word).
+    // You're now using a reverse method that StringBuilder has and .toString is converting the string builder back to a regular string
     }
 
     /**
@@ -49,8 +54,10 @@ String[]arr = getWords(sentence);
      */
     public static String reverseFirstWordThenCamelCase(String sentence) {
 
+        String revWord = reverseFirstWord(sentence);
 
-        return reverseFirstWordThenCamelCase(sentence);
+
+        return revWord.substring(0,1).toUpperCase() + revWord.substring(1);
     }
 
 
@@ -60,12 +67,11 @@ String[]arr = getWords(sentence);
      * @return string with identical contents, excluding the character at the specified index
      * given a string and index, return an identical string excluding the character at the specified index
      */
-    public static String removeCharacterAtIndex(String str, int index) {
+    public static String removeCharacterAtIndex (String str, int index) {
 
-        StringBuilder sb = new StringBuilder(str);
-        sb.deleteCharAt(index);
 
-        return sb.toString();
+
+        return str.substring(0, index) + str.substring(index + 1);
     }
 }
 

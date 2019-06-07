@@ -9,10 +9,10 @@ public class BasicStringUtils {
      * @return string with identical content, and the first character capitalized
      */
     public static String camelCase(String str) {
+    String newString = str.substring(0,1).toUpperCase() + str.substring(1);
+    // Create new string| create substring starting at 0 & ending at 1|Upper case the first index and add rest of string.
 
-
-
-        return null;
+        return newString;
     }
 
     /**
@@ -21,19 +21,16 @@ public class BasicStringUtils {
      */
     public static String reverse(String str) {
 
+        String newString = "";
 
+        for (int i = str.length() -1; i >= 0; i--) {
 
-
-        /*int count = 0;
-        String[] answer = new String[str.length];
-        for (int i = array.length - 1 ; i >= 0; i--){
-            answer[count] = array[i];
-            count++;
-
-
+            newString += str.charAt(i);
 
         }
-        */return null;
+
+
+        return newString;
     }
 
     /**
@@ -42,12 +39,13 @@ public class BasicStringUtils {
      */
     public static String reverseThenCamelCase(String str) {
 
-        String rev = reverse(str);
-        String result = rev.substring(0,1).toUpperCase() + rev.substring(1);
+       String newString = reverse(str);// reverse(str) is calling method above
+       String camelString = camelCase(newString); //camelCase is calling method above
 
-        return result;
+
+        return camelString;
+
     }
-
 
 
     /**
@@ -55,8 +53,9 @@ public class BasicStringUtils {
      * @return string with identical contents excluding first and last character
      */
     public static String removeFirstAndLastCharacter(String str) {
-
-            return str.substring(1,str.length()-1);
+        String subStr = str.substring(1, str.length() -1);//<-- does not include last index
+//      Creates a new string and makes current string a substring staring at the second index(1) and ending at the last index (not including index)
+            return subStr;
         }
 
 
@@ -68,7 +67,22 @@ public class BasicStringUtils {
      * @return string with identical characters, each with opposite casing
      */
     public static String invertCasing(String str) {
+        char[] eachChar = str.toCharArray();
 
-        return null;
+        for (int i = 0; i < eachChar.length; i++) {
+
+            //char j = eachChar[i];
+            if(Character.isUpperCase(eachChar[i])){
+
+                eachChar[i] = Character.toLowerCase(eachChar[i]);
+            }
+            else {
+                eachChar[i] = Character.toUpperCase(eachChar[i]);
+            }
+
+        }
+
+
+        return new String(eachChar);
     }
 }
